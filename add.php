@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { // $_SERVER est appelée variable s
     if ($name !== '' && $price !== '' && $stock !== '') {
         $produitObj->ajouter($name, $price, $stock);
 
-        header("Location: add.php");
+        header("Location: index.php");
         exit();
     } else {
         $_SESSION['message'] = "Veuillez remplir tous les champs !";
