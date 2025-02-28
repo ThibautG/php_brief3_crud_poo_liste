@@ -7,14 +7,12 @@ Avec le require_once on force le truc pour que ça bloque si on le trouve pas */
 require_once 'Produit.php';
 
 // récupération de l'id dans l'url
-// $id= isset($_GET['id']) ? $_GET['id'] : 0; // correction de Sacha
-$id= $_GET['id'] ;
+$id= isset($_GET['id']) ? $_GET['id'] : 0; // correction de Sacha
+
 
 $produitObj = new Produit(); // je crée une nouvelle instance de produit
 
 $produitObj->supprimer($id);
-
-
 
 ?>
 
